@@ -1,4 +1,8 @@
+com\project\ControllerMobileList.class
 com\project\Main.class
-com\project\Controller.class
-com\project\UtilsViews.class
+com\project\ControllerDesktop.class
+com\project\ControllerMobileDetail.class
 com\project\ControllerListItem.class
+com\project\Data.class
+com\project\ControllerMobileMenu.class
+com\project\UtilsViews.class

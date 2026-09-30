@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane styleClass="root-pane" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ControllerMobileMenu">
+   <top>
+      <StackPane styleClass="header" BorderPane.alignment="CENTER">
+         <children>
+            <Label styleClass="header-title" text="Nintendo DB" />
+         </children>
+      </StackPane>
+   </top>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Label maxWidth="1.7976931348623157E308" onMouseClicked="#goCharacters" styleClass="menu-row" text="Personatges" />
+            <Label maxWidth="1.7976931348623157E308" onMouseClicked="#goGames" styleClass="menu-row" text="Jocs" />
+            <Label maxWidth="1.7976931348623157E308" onMouseClicked="#goConsoles" styleClass="menu-row" text="Consoles" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

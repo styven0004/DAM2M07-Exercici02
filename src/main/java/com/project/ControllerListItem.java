@@ -1,43 +1,34 @@
 package com.project;
 
-import java.util.Objects;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.shape.Circle;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 
 public class ControllerListItem {
 
     @FXML
-    private Label title, subtitle;
+    private HBox root;
+
+    @FXML
+    private Label title;
 
     @FXML
     private ImageView img;
-
-    @FXML
-    private Circle circle;
 
     public void setTitle(String title) {
         this.title.setText(title);
     }
 
-    public void setSubtitle(String subtitle) {
-        this.subtitle.setText(subtitle);
+    public void setImatge(String fileName) {
+        this.img.setImage(Data.getImage(fileName));
     }
 
-    public void setImatge(String imagePath) {
-        try {
-            Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(imagePath)));
-            this.img.setImage(image);
-        } catch (NullPointerException e) {
-            System.err.println("Error loading image asset: " + imagePath);
-            e.printStackTrace();
+    // Marca l'element com a seleccionat (estil definit a style.css)
+    public void setSelected(boolean selected) {
+        root.getStyleClass().remove("selected");
+        if (selected) {
+            root.getStyleClass().add("selected");
         }
-    }
-
-    public void setCircleColor(String color) {
-        circle.setStyle("-fx-fill: " + color);
     }
 }
